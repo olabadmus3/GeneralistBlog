@@ -35,6 +35,9 @@ header{
     justify-content: space-between;
     width: 1000px;
 }
+.hamburger, #toggle{
+    display: none;
+}
 
 .navItems{
     border-left: 2px solid #ececec;
@@ -120,7 +123,7 @@ header{
 .tabLinks > span{
     border-left: 2px solid #ececec;
     border: 2px solid #ececec;
-    padding: .5rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,12 +215,12 @@ header{
 }
 .latestContent{
     background-color: #fff;
-    border: 2px solid #ececec;
+    border: 1px solid #ececec;
     max-width: 400px;
     display: block;
     margin: -3rem auto 0;
     padding-inline: .3rem;
-    margin-top: 7.7rem;
+    margin-top: 7.3rem;
 }
 
 .latestContent > h1{
@@ -379,4 +382,97 @@ h4{
 .upLeft>.subscribe{
     border: 1.5px solid #ececec;
     font-size: larger;
+}
+
+@media(min-width:260px) and (max-width:420px){
+.hamburger{
+    display: block;
+    font-size: 1.3rem;
+}
+
+.innerNav>h2{
+    margin-left: 0;
+}
+
+.tabs{
+    flex-direction: column;
+    width: 330px;
+    flex-direction: column;
+
+}
+.inputCont{
+    border: 2px solid #fff;
+    width: 100%;
+    margin-left: 0;
+}
+.tabsLinks{
+    width: 100%;
+    gap: .5rem;
+}
+.tabLinks>a{
+    font-size: 8px;
+}
+.tabLinks>span{
+    padding-inline: .8rem;
+}
+
+
+.innerNav{
+    width: 330px;
+    margin: auto;
+}
+.navRight{
+    display: none;
+    position: absolute;
+    width: 340px;
+    padding: 1.8rem;
+    top: 4.4rem;
+    right: 3px;
+    z-index: 1;
+    background-color: #4d5052;
+    opacity: 0.97;
+    border-bottom: 4px solid #fff;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.navItems{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-left: none;
+}
+
+.navItems>a{
+    width: 100%;
+    color: #000;
+    font-size: 18px;
+    padding: 0.6rem;
+    text-align: left;
+    border-bottom: 4px solid #fff;
+}
+
+.subscribe{
+    margin-block: 1rem;
+}
+
+#toggle:checked + .navRight{
+    display: block;
+    transform: none;
+}
+
+.generalistBlog{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 330px;
+    padding-top: 6rem;
+    margin: auto;
+}
+
+.authorCard{
+    box-shadow: .3rem .3rem 7px grey;
+}
+
+
+
 }
